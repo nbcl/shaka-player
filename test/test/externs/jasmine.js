@@ -306,11 +306,11 @@ jasmine.CallTracker.prototype.count = function() {};
 jasmine.CallTracker.prototype.argsFor = function(i) {};
 
 
-/** @return {!Array.<!Array.<?>>} */
+/** @return {!Array<!Array.<?>>} */
 jasmine.CallTracker.prototype.allArgs = function() {};
 
 
-/** @return {!Array.<!jasmine.CallContext>} */
+/** @return {!Array<!jasmine.CallContext>} */
 jasmine.CallTracker.prototype.all = function() {};
 
 

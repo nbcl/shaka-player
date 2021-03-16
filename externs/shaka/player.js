@@ -326,7 +326,7 @@ shaka.extern.Track;
 
 
 /**
- * @typedef {!Array.<!shaka.extern.Track>}
+ * @typedef {!Array<!shaka.extern.Track>}
  */
 shaka.extern.TrackList;
 

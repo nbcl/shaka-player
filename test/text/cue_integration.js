@@ -45,7 +45,7 @@ describe('Cue', () => {
   /**
    * @param {string} text
    * @param {!shaka.extern.TextParser.TimeContext} time
-   * @return {!Array.<!shaka.extern.Cue>}
+   * @return {!Array<!shaka.extern.Cue>}
    */
   function parseVtt(text, time) {
     const data =

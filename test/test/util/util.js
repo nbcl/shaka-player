@@ -266,7 +266,7 @@ shaka.test.Util = class {
    * Fetches the resource at the given URI.
    *
    * @param {string} uri
-   * @return {!Promise.<!ArrayBuffer>}
+   * @return {!Promise<!ArrayBuffer>}
    */
   static fetch(uri) {
     return new Promise(((resolve, reject) => {

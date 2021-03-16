@@ -85,13 +85,13 @@ shaka.ui.Controls = class extends shaka.util.FakeEventTarget {
     /** @private {boolean} */
     this.isSeeking_ = false;
 
-    /** @private {!Array.<!HTMLElement>} */
+    /** @private {!Array<!HTMLElement>} */
     this.menus_ = [];
 
     /**
      * Individual controls which, when hovered or tab-focused, will force the
      * controls to be shown.
-     * @private {!Array.<!Element>}
+     * @private {!Array<!Element>}
      */
     this.showOnHoverControls_ = [];
 
@@ -157,7 +157,7 @@ shaka.ui.Controls = class extends shaka.util.FakeEventTarget {
     /** @private {?number} */
     this.lastTouchEventTime_ = null;
 
-    /** @private {!Array.<!shaka.extern.IUIElement>} */
+    /** @private {!Array<!shaka.extern.IUIElement>} */
     this.elements_ = [];
 
     /** @private {shaka.ui.Localization} */

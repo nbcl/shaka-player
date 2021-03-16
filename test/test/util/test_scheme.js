@@ -64,7 +64,7 @@ let ExtraMetadataType;
  *   video: AVMetadataType,
  *   audio: AVMetadataType,
  *   text: TextMetadataType,
- *   videoResolutions: (!Array.<!Array<number>>|undefined),
+ *   videoResolutions: (!Array<!Array<number>>|undefined),
  *   audioLanguages: (!Array<string>|undefined),
  *   textLanguages: (!Array<string>|undefined),
  *   duration: number,

@@ -266,7 +266,7 @@ function onFetch(event) {
  * the cache, or both, and return the appropriate version of the resource.
  *
  * @param {!Request} request
- * @return {!Promise.<!Response>}
+ * @return {!Promise<!Response>}
  */
 async function fetchCacheableResource(request) {
   const cache = await caches.open(CACHE_NAME);
@@ -305,7 +305,7 @@ async function fetchCacheableResource(request) {
  *
  * @param {!Cache} cache
  * @param {!Request} request
- * @return {!Promise.<!Response>}
+ * @return {!Promise<!Response>}
  */
 async function fetchAndCache(cache, request) {
   const response = await fetch(request);

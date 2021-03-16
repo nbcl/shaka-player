@@ -83,7 +83,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
      */
     this.wasPlaying_ = false;
 
-    /** @private {!Array.<!shaka.ads.CuePoint>} */
+    /** @private {!Array<!shaka.ads.CuePoint>} */
     this.adCuePoints_ = [];
 
     this.eventManager.listen(this.localization,

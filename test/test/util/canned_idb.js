@@ -162,7 +162,7 @@ shaka.test.CannedIDB = class {
 
   /**
    * @param {string} name The name of the database to open.
-   * @return {!Promise.<!IDBDatabase>} Resolved when the named DB has been
+   * @return {!Promise<!IDBDatabase>} Resolved when the named DB has been
    *   opened.
    * @private
    */

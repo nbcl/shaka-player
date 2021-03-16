@@ -495,7 +495,7 @@ function WebDriverScreenshotMiddlewareFactory(launcher) {
   /**
    * @param {wd.remote} webDriverClient A WebDriver client, an object from the
    *   "wd" package, created by "wd.remote()".
-   * @return {!Promise.<!Buffer>} A Buffer containing a PNG screenshot
+   * @return {!Promise<!Buffer>} A Buffer containing a PNG screenshot
    */
   function getScreenshot(webDriverClient) {
     return new Promise((resolve, reject) => {

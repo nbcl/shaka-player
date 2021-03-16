@@ -122,7 +122,7 @@ describe('DashParser ContentProtection', () => {
   /**
    * Build an expected manifest which checks DRM-related fields.
    *
-   * @param {!Array.<!Object>} drmInfos A list of DrmInfo-like objects.
+   * @param {!Array<!Object>} drmInfos A list of DrmInfo-like objects.
    * @param {!Array<string>=} keyIds The key IDs to attach to each variant.
    *   Will default to the keyIds from the first drmInfo object.
    * @return {Object} A Manifest-like object.

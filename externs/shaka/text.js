@@ -321,7 +321,7 @@ shaka.extern.Cue = class {
     /**
      * Text decoration. A combination of underline, overline
      * and line through. Empty array means no decoration.
-     * @type {!Array.<!shaka.text.Cue.textDecoration>}
+     * @type {!Array<!shaka.text.Cue.textDecoration>}
      * @exportDoc
      */
     this.textDecoration;
@@ -344,7 +344,7 @@ shaka.extern.Cue = class {
      * Nested cues, which should be laid out horizontally in one block.
      * Top-level cues are blocks, and nested cues are inline elements.
      * Cues can be nested arbitrarily deeply.
-     * @type {!Array.<!shaka.extern.Cue>}
+     * @type {!Array<!shaka.extern.Cue>}
      * @exportDoc
      */
     this.nestedCues;
@@ -397,7 +397,7 @@ shaka.extern.TextParser = class {
    * @param {shaka.extern.TextParser.TimeContext} timeContext
    *    The time information that should be used to adjust the times values
    *    for each cue.
-   * @return {!Array.<!shaka.extern.Cue>}
+   * @return {!Array<!shaka.extern.Cue>}
    *
    * @exportDoc
    */
@@ -464,7 +464,7 @@ shaka.extern.TextDisplayer = class {
   /**
    * Append given text cues to the list of cues to be displayed.
    *
-   * @param {!Array.<!shaka.text.Cue>} cues
+   * @param {!Array<!shaka.text.Cue>} cues
    *    Text cues to be appended.
    *
    * @exportDoc

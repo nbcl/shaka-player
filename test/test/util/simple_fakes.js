@@ -172,7 +172,7 @@ shaka.test.FakeVideo = class {
   constructor(currentTime) {
     /** @const {!Object<string, !Function>} */
     this.on = {};  // event listeners
-    /** @type {!Array.<!TextTrack>} */
+    /** @type {!Array<!TextTrack>} */
     this.textTracks = [];
 
     this.currentTime = currentTime || 0;

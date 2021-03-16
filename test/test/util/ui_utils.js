@@ -34,8 +34,8 @@ shaka.test.UiUtils = class {
 
 
   /**
-   * @param {!Array.<!Element>} containers
-   * @param {!Array.<!Element>} videos
+   * @param {!Array<!Element>} containers
+   * @param {!Array<!Element>} videos
    * @suppress {visibility}
    */
   static async createUIThroughDOMAutoSetup(containers, videos) {

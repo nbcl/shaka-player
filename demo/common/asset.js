@@ -43,7 +43,7 @@ const ShakaDemoAssetInfo = class {
     this.focus = false;
     /** @type {boolean} */
     this.disabled = false;
-    /** @type {!Array.<!shakaAssets.ExtraText>} */
+    /** @type {!Array<!shakaAssets.ExtraText>} */
     this.extraText = [];
     /** @type {?string} */
     this.certificateUri = null;
@@ -51,9 +51,9 @@ const ShakaDemoAssetInfo = class {
     this.description = null;
     /** @type {boolean} */
     this.isFeatured = false;
-    /** @type {!Array.<!shakaAssets.KeySystem>} */
+    /** @type {!Array<!shakaAssets.KeySystem>} */
     this.drm = [shakaAssets.KeySystem.CLEAR];
-    /** @type {!Array.<!shakaAssets.Feature>} */
+    /** @type {!Array<!shakaAssets.Feature>} */
     this.features = [shakaAssets.Feature.VOD];
     /** @type {!Map<string, string>} */
     this.licenseServers = new Map();

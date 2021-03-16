@@ -413,16 +413,16 @@ shaka.test.FakeMediaSourceEngine = class {
 
 /**
  * @typedef {{
- *   initSegments: !Array.<!BufferSource>,
- *   segments: !Array.<!BufferSource>,
+ *   initSegments: !Array<!BufferSource>,
+ *   segments: !Array<!BufferSource>,
  *   segmentStartTimes: !Array<number>,
  *   segmentDuration: number,
  *   timestampOffset: number,
  * }}
  *
- * @property {!Array.<!BufferSource>} initSegments
+ * @property {!Array<!BufferSource>} initSegments
  *   The stream's initialization segments (for all periods).
- * @property {!Array.<!BufferSource>} segments
+ * @property {!Array<!BufferSource>} segments
  *   The stream's media segments (for all periods).
  * @property {!Array<number>} segmentStartTimes
  *   The start time of each media segment as they would appear within a

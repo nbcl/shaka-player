@@ -293,7 +293,7 @@ shaka.extern.StorageCell = class {
    * should fail to be added.
    *
    * @param {!Array<shaka.extern.SegmentDataDB>} segments
-   * @return {!Promise.<!Array<number>>}
+   * @return {!Promise<!Array<number>>}
    */
   addSegments(segments) {}
 
@@ -314,7 +314,7 @@ shaka.extern.StorageCell = class {
    * not found, the promise chain will be rejected.
    *
    * @param {!Array<number>} keys
-   * @return {!Promise.<!Array<shaka.extern.SegmentDataDB>>}
+   * @return {!Promise<!Array<shaka.extern.SegmentDataDB>>}
    */
   getSegments(keys) {}
 
@@ -389,7 +389,7 @@ shaka.extern.EmeSessionStorageCell = class {
 
   /**
    * Gets the currently stored sessions.
-   * @return {!Promise.<!Array<shaka.extern.EmeSessionDB>>}
+   * @return {!Promise<!Array<shaka.extern.EmeSessionDB>>}
    */
   getAll() {}
 

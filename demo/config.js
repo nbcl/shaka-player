@@ -41,7 +41,7 @@ shakaDemo.Config = class {
 
     /**
      * A list of all sections.
-     * @private {!Array.<!shakaDemo.InputContainer>}
+     * @private {!Array<!shakaDemo.InputContainer>}
      */
     this.sections_ = [];
 

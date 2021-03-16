@@ -55,7 +55,7 @@ shaka.test.ManifestParser = class {
    * @param {number=} startByte
    * @param {?number=} endByte
    * @param {number=} timestampOffset
-   * @param {!Array.<!shaka.media.SegmentReference>=} partialReferences
+   * @param {!Array<!shaka.media.SegmentReference>=} partialReferences
    * @return {!shaka.media.SegmentReference}
    */
   static makeReference(uri, start, end, baseUri = '',

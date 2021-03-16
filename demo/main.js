@@ -1104,7 +1104,7 @@ shakaDemo.Main = class {
   /**
    * @param {string} uri
    * @param {!shaka.net.NetworkingEngine} netEngine
-   * @return {!Promise.<!ArrayBuffer>}
+   * @return {!Promise<!ArrayBuffer>}
    * @private
    */
   async requestCertificate_(uri, netEngine) {

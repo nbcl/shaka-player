@@ -111,7 +111,7 @@ shaka.extern.InitDataOverride;
  *   audioRobustness: string,
  *   videoRobustness: string,
  *   serverCertificate: Uint8Array,
- *   initData: Array.<!shaka.extern.InitDataOverride>,
+ *   initData: Array<!shaka.extern.InitDataOverride>,
  *   keyIds: Set<string>
  * }}
  *
@@ -146,7 +146,7 @@ shaka.extern.InitDataOverride;
  *   A key-system-specific server certificate used to encrypt license requests.
  *   Its use is optional and is meant as an optimization to avoid a round-trip
  *   to request a certificate.
- * @property {Array.<!shaka.extern.InitDataOverride>} initData
+ * @property {Array<!shaka.extern.InitDataOverride>} initData
  *   <i>Defaults to [], e.g., no override.</i> <br>
  *   A list of initialization data which override any initialization data found
  *   in the content.  See also shaka.extern.InitDataOverride.
@@ -307,7 +307,7 @@ shaka.extern.CreateSegmentIndexFunction;
  * @property {boolean} encrypted
  *   <i>Defaults to false.</i><br>
  *   True if the stream is encrypted.
- * @property {!Array.<!shaka.extern.DrmInfo>} drmInfos
+ * @property {!Array<!shaka.extern.DrmInfo>} drmInfos
  *   <i>Defaults to [] (i.e., no DRM).</i> <br>
  *   An array of DrmInfo objects which describe DRM schemes are compatible with
  *   the content.

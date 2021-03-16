@@ -80,7 +80,7 @@ describe('TextTrackIntegration', () => {
 
 
   describe('addCue', () => {
-    /** @type {!Array.<!VTTCue>} */
+    /** @type {!Array<!VTTCue>} */
     let cues;
 
     // Wait to construct cue objects, so we know the polyfill for VTTCue is
@@ -127,7 +127,7 @@ describe('TextTrackIntegration', () => {
   });
 
   describe('removeCue', () => {
-    /** @type {!Array.<!VTTCue>} */
+    /** @type {!Array<!VTTCue>} */
     let cues;
 
     // Wait to construct cue objects, so we know the polyfill for VTTCue is

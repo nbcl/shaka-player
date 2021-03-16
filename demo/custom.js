@@ -43,13 +43,13 @@ shakaDemo.Custom = class {
       dialogPolyfill.registerDialog(this.dialog_);
     }
 
-    /** @private {!Set.<!ShakaDemoAssetInfo>} */
+    /** @private {!Set<!ShakaDemoAssetInfo>} */
     this.assets_ = this.loadAssetInfos_();
 
     /** @private {!HTMLInputElement} */
     this.manifestField_;
 
-    /** @private {!Array.<!shakaDemo.AssetCard>} */
+    /** @private {!Array<!shakaDemo.AssetCard>} */
     this.assetCards_ = [];
     this.savedList_ = document.createElement('div');
     container.appendChild(this.savedList_);
@@ -84,7 +84,7 @@ shakaDemo.Custom = class {
     });
   }
 
-  /** @return {!Array.<!ShakaDemoAssetInfo>} */
+  /** @return {!Array<!ShakaDemoAssetInfo>} */
   assets() {
     return Array.from(this.assets_);
   }
@@ -116,7 +116,7 @@ shakaDemo.Custom = class {
 
   /**
    * @param {!ShakaDemoAssetInfo} assetInProgress
-   * @param {!Array.<!HTMLInputElement>} inputsToCheck
+   * @param {!Array<!HTMLInputElement>} inputsToCheck
    * @return {!Element} div
    * @private
    */
@@ -244,7 +244,7 @@ shakaDemo.Custom = class {
 
   /**
    * @param {!ShakaDemoAssetInfo} assetInProgress
-   * @param {!Array.<!HTMLInputElement>} inputsToCheck
+   * @param {!Array<!HTMLInputElement>} inputsToCheck
    * @return {!Element} div
    * @private
    */
@@ -331,7 +331,7 @@ shakaDemo.Custom = class {
 
   /**
    * @param {!ShakaDemoAssetInfo} assetInProgress
-   * @param {!Array.<!HTMLInputElement>} inputsToCheck
+   * @param {!Array<!HTMLInputElement>} inputsToCheck
    * @return {!Element} div
    * @private
    */
@@ -425,7 +425,7 @@ shakaDemo.Custom = class {
 
   /**
    * @param {!ShakaDemoAssetInfo} assetInProgress
-   * @param {!Array.<!HTMLInputElement>} inputsToCheck
+   * @param {!Array<!HTMLInputElement>} inputsToCheck
    * @param {!Element} iconDiv
    * @return {!Element} div
    * @private
@@ -545,7 +545,7 @@ shakaDemo.Custom = class {
 
   /**
    * @param {!ShakaDemoAssetInfo} assetInProgress
-   * @param {!Array.<!HTMLInputElement>} inputsToCheck
+   * @param {!Array<!HTMLInputElement>} inputsToCheck
    * @return {!Element} div
    * @private
    */
@@ -585,7 +585,7 @@ shakaDemo.Custom = class {
     shaka.util.Dom.removeAllChildren(this.dialog_);
 
     // An array of inputs which have validity checks which we care about.
-    /** @type {!Array.<!HTMLInputElement>} */
+    /** @type {!Array<!HTMLInputElement>} */
     const inputsToCheck = [];
 
     // Make the contents divs.
@@ -653,14 +653,14 @@ shakaDemo.Custom = class {
   }
 
   /**
-   * @return {!Set.<!ShakaDemoAssetInfo>}
+   * @return {!Set<!ShakaDemoAssetInfo>}
    * @private
    */
   loadAssetInfos_() {
     const savedString = window.localStorage.getItem(shakaDemo.Custom.saveId_);
     if (savedString) {
       const assets =
-        /** @type {!Array.<!ShakaDemoAssetInfo>} */(JSON.parse(savedString));
+        /** @type {!Array<!ShakaDemoAssetInfo>} */(JSON.parse(savedString));
       return new Set(assets.map((json) => {
         const asset = ShakaDemoAssetInfo.fromJSON(json);
         shakaDemoMain.setupOfflineSupport(asset);
@@ -671,7 +671,7 @@ shakaDemo.Custom = class {
   }
 
   /**
-   * @param {!Set.<!ShakaDemoAssetInfo>} assetInfos
+   * @param {!Set<!ShakaDemoAssetInfo>} assetInfos
    * @private
    */
   saveAssetInfos_(assetInfos) {

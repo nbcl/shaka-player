@@ -444,7 +444,7 @@ google.ima.dai.api.StreamData.prototype.adProgressData;
 google.ima.dai.api.StreamData.prototype.url;
 
 
-/** @type {!Array.<!google.ima.dai.api.CuePoint>} */
+/** @type {!Array<!google.ima.dai.api.CuePoint>} */
 google.ima.dai.api.StreamData.prototype.cuepoints;
 
 

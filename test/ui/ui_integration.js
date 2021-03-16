@@ -131,7 +131,7 @@ describe('UI', () => {
     let languagesToButtons;
     /** @type {!Array<string>} */
     let langsFromContent;
-    /** @type {!Array.<!HTMLElement>} */
+    /** @type {!Array<!HTMLElement>} */
     let languageButtons;
     /** @type {!Element} */
     let languageMenu;
@@ -281,7 +281,7 @@ describe('UI', () => {
 
     /**
      * @param {string} playerEventName
-     * @param {function():!Array.<!shaka.extern.Track>} getTracks
+     * @param {function():!Array<!shaka.extern.Track>} getTracks
      */
     async function verifyLanguageChangeViaUI(playerEventName, getTracks) {
       expect(getSelectedTrack(getTracks()).language).toBe(oldLanguage);
@@ -296,7 +296,7 @@ describe('UI', () => {
 
     /**
      * @param {string} controlsEventName
-     * @param {function():!Array.<!shaka.extern.Track>} getTracks
+     * @param {function():!Array<!shaka.extern.Track>} getTracks
      * @param {function(string)} selectLanguage
      */
     async function verifyLanguageChangeViaAPI(
@@ -331,7 +331,7 @@ describe('UI', () => {
     let resolutionsToButtons;
     /** @type {!Array<number>} */
     let resolutionsFromContent;
-    /** @type {!Array.<!HTMLElement>} */
+    /** @type {!Array<!HTMLElement>} */
     let resolutionButtons;
     /** @type {!Element} */
     let resolutionsMenu;
@@ -509,7 +509,7 @@ describe('UI', () => {
     }
 
     /**
-     * @param {!Array.<!shaka.extern.Track>} tracks
+     * @param {!Array<!shaka.extern.Track>} tracks
      * @param {number} height
      * @return {shaka.extern.Track}
      */
@@ -617,7 +617,7 @@ describe('UI', () => {
   });  // describe('UI element plugins')
 
   /**
-   * @param {!Array.<!shaka.extern.Track>} tracks
+   * @param {!Array<!shaka.extern.Track>} tracks
    * @return {!shaka.extern.Track}
    */
   function getSelectedTrack(tracks) {
@@ -629,7 +629,7 @@ describe('UI', () => {
   }
 
   /**
-    * @param {!Array.<!HTMLElement>} buttons
+    * @param {!Array<!HTMLElement>} buttons
     * @param {!Array<string>} choices
     * @param {function(string):string|function(number):string} modifier
     * @return {!Map<string, !HTMLElement>|!Map<number, !HTMLElement>}
@@ -659,7 +659,7 @@ describe('UI', () => {
    *
    * @param {!NodeList} buttons
    * @param {!Array<string>} excludeClasses
-   * @return {!Array.<!HTMLElement>}
+   * @return {!Array<!HTMLElement>}
    */
   function filterButtons(buttons, excludeClasses) {
     return shaka.util.Iterables.filter(buttons,
@@ -679,7 +679,7 @@ describe('UI', () => {
    * (The order doesn't matter).
    *
    * @param {!Array<string>} elementsFromContent
-   * @param {!Array.<!HTMLElement>} elementsFromUI
+   * @param {!Array<!HTMLElement>} elementsFromUI
    */
   function verifyItems(elementsFromContent, elementsFromUI) {
     for (const element of elementsFromUI) {
