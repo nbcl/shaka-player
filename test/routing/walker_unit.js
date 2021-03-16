@@ -249,7 +249,7 @@ describe('Walker', () => {
      * we will add |currentRoute| to this set. That way we will know what
      * route we took steps on.
      *
-     * @type {!Array.<?number>}
+     * @type {!Array<?number>}
      */
     const tookSteps = [];
 
