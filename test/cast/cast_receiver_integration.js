@@ -51,11 +51,11 @@ filterDescribe('CastReceiver', castReceiverIntegrationSupport, () => {
   /** @type {shaka.util.PublicPromise} */
   let messageWaitPromise;
 
-  /** @type {!Array.<function()>} */
+  /** @type {!Array<function()>} */
   let toRestore;
   let pendingWaitWrapperCalls = 0;
 
-  /** @type {!Object.<string, ?shaka.extern.DrmSupportType>} */
+  /** @type {!Object<string, ?shaka.extern.DrmSupportType>} */
   let support = {};
 
   let fakeInitState;

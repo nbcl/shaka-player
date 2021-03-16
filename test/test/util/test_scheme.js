@@ -33,7 +33,7 @@ goog.requireType('shaka.test.IStreamGenerator');
  *   codecs: string,
  *   delaySetup: (boolean|undefined),
  *   language: (string|undefined),
- *   closedCaptions: (!Map.<string, string>|undefined),
+ *   closedCaptions: (!Map<string, string>|undefined),
  *   initData: (string|undefined)
  * }}
  */
@@ -52,7 +52,7 @@ let TextMetadataType;
 /**
  * @typedef {{
  *   delaySetup: (boolean|undefined),
- *   closedCaptions: (!Map.<string, string>|undefined),
+ *   closedCaptions: (!Map<string, string>|undefined),
  *   initData: (string|undefined),
  *   language: (string|undefined)
  * }}
@@ -64,12 +64,12 @@ let ExtraMetadataType;
  *   video: AVMetadataType,
  *   audio: AVMetadataType,
  *   text: TextMetadataType,
- *   videoResolutions: (!Array.<!Array.<number>>|undefined),
- *   audioLanguages: (!Array.<string>|undefined),
- *   textLanguages: (!Array.<string>|undefined),
+ *   videoResolutions: (!Array.<!Array<number>>|undefined),
+ *   audioLanguages: (!Array<string>|undefined),
+ *   textLanguages: (!Array<string>|undefined),
  *   duration: number,
- *   licenseServers: (!Object.<string, string>|undefined),
- *   licenseRequestHeaders: (!Object.<string, string>|undefined)
+ *   licenseServers: (!Object<string, string>|undefined),
+ *   licenseRequestHeaders: (!Object<string, string>|undefined)
  * }}
  */
 let MetadataType;
@@ -87,7 +87,7 @@ shaka.test.TestScheme = class {
    * @param {string} uri
    * @param {shaka.extern.Request} request
    * @param {shaka.net.NetworkingEngine.RequestType=} requestType
-   * @return {!shaka.extern.IAbortableOperation.<shaka.extern.Response>}
+   * @return {!shaka.extern.IAbortableOperation<shaka.extern.Response>}
    */
   static plugin(uri, request, requestType) {
     const manifestParts = /^test:([^/]+)$/.exec(uri);
@@ -376,11 +376,11 @@ shaka.test.TestScheme = class {
 };
 
 
-/** @const {!Object.<string, shaka.extern.Manifest>} */
+/** @const {!Object<string, shaka.extern.Manifest>} */
 shaka.test.TestScheme.MANIFESTS = {};
 
 
-/** @const {!Object.<string, !Object.<string, !shaka.test.IStreamGenerator>>} */
+/** @const {!Object<string, !Object<string, !shaka.test.IStreamGenerator>>} */
 shaka.test.TestScheme.GENERATORS = {};
 
 
@@ -442,7 +442,7 @@ const sintelEncryptedAudio = {
       'bmVfdGVzdCIIzsW/9dxA3ckyAA==',
 };
 
-/** @type {!Object.<string, string>} */
+/** @type {!Object<string, string>} */
 const widevineDrmServers = {
   'com.widevine.alpha': 'https://cwip-shaka-proxy.appspot.com/no_auth',
 };
@@ -475,7 +475,7 @@ const axinomMultiDrmAudioSegment = {
       'l0dNLWg==',
 };
 
-/** @type {!Object.<string, string>} */
+/** @type {!Object<string, string>} */
 const axinomDrmServers = {
   'com.widevine.alpha':
       'https://drm-widevine-licensing.axtest.net/AcquireLicense',
@@ -483,7 +483,7 @@ const axinomDrmServers = {
       'https://drm-playready-licensing.axtest.net/AcquireLicense',
 };
 
-/** @type {!Object.<string, string>} */
+/** @type {!Object<string, string>} */
 const axinomDrmHeaders = {
   'X-AxDRM-Message':
       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5' +
@@ -509,7 +509,7 @@ function inherit(base, overrides) {
   return Object.assign({}, base, overrides);
 }
 
-/** @const {!Object.<string, MetadataType>} */
+/** @const {!Object<string, MetadataType>} */
 shaka.test.TestScheme.DATA = {
   'sintel': {
     video: sintelVideoSegment,

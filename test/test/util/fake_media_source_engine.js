@@ -21,26 +21,26 @@ goog.require('shaka.util.ManifestParserUtils');
  */
 shaka.test.FakeMediaSourceEngine = class {
   /**
-   * @param {!Object.<string, shaka.test.FakeMediaSourceEngine.SegmentData>}
+   * @param {!Object<string, shaka.test.FakeMediaSourceEngine.SegmentData>}
    *   segmentData
    * @param {number=} drift Optional drift. Defaults to 0.
    */
   constructor(segmentData, drift) {
     /**
-     * @type {!Object.<string, shaka.test.FakeMediaSourceEngine.SegmentData>}
+     * @type {!Object<string, shaka.test.FakeMediaSourceEngine.SegmentData>}
      */
     this.segmentData = segmentData;
 
-    /** @type {!Object.<string, !Array.<boolean>>} */
+    /** @type {!Object<string, !Array<boolean>>} */
     this.initSegments = {};
 
-    /** @type {!Object.<string, !Array.<boolean>>} */
+    /** @type {!Object<string, !Array<boolean>>} */
     this.segments = {};
 
     /** @private {number} */
     this.drift_ = drift || 0;
 
-    /** @private {!Object.<string, number>} */
+    /** @private {!Object<string, number>} */
     this.timestampOffsets_ = {};
 
     /** @private {number} */
@@ -415,7 +415,7 @@ shaka.test.FakeMediaSourceEngine = class {
  * @typedef {{
  *   initSegments: !Array.<!BufferSource>,
  *   segments: !Array.<!BufferSource>,
- *   segmentStartTimes: !Array.<number>,
+ *   segmentStartTimes: !Array<number>,
  *   segmentDuration: number,
  *   timestampOffset: number,
  * }}
@@ -424,7 +424,7 @@ shaka.test.FakeMediaSourceEngine = class {
  *   The stream's initialization segments (for all periods).
  * @property {!Array.<!BufferSource>} segments
  *   The stream's media segments (for all periods).
- * @property {!Array.<number>} segmentStartTimes
+ * @property {!Array<number>} segmentStartTimes
  *   The start time of each media segment as they would appear within a
  *   segment index. These values plus drift simulate the segments'
  *   baseMediaDecodeTime (or equivalent) values.

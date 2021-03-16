@@ -97,7 +97,7 @@ cast.receiver.CastReceiverManager = class {
    */
   getCastMessageBus(namespace, messageType) {}
 
-  /** @return {Array.<string>} */
+  /** @return {Array<string>} */
   getSenders() {}
 
   start() {}

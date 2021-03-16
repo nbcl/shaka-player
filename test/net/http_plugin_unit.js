@@ -325,7 +325,7 @@ function httpPluginTests(usingFetch) {
       await Util.shortDelay();  // Delay for jasmine-fetch to detect the abort.
       expect(actual.aborted).toBe(true);
     } else {
-      /** @type {shaka.extern.IAbortableOperation.<shaka.extern.Response>} */
+      /** @type {shaka.extern.IAbortableOperation<shaka.extern.Response>} */
       let operation;
 
       // Jasmine-ajax stubbed requests are purely synchronous, so we can't

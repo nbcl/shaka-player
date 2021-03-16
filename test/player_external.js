@@ -221,7 +221,7 @@ describe('Player', () => {
   }
 
   /**
-   * @param {!Object.<string, string>} headers
+   * @param {!Object<string, string>} headers
    * @param {shaka.net.NetworkingEngine.RequestType} requestType
    * @param {shaka.extern.Request} request
    */

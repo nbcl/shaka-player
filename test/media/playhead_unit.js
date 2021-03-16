@@ -25,7 +25,7 @@ let TimeRange;
 
 /**
  * @typedef {{
- *   buffered: !Array.<TimeRange>,
+ *   buffered: !Array<TimeRange>,
  *   start: number,
  *   waitingAt: number,
  *   expectedEndTime: number,
@@ -40,7 +40,7 @@ let TimeRange;
  * to the expected time.  Also, if the gap is large, we should get a 'largegap'
  * event from the Playhead, which we may optionally suppress.
  *
- * @property {!Array.<TimeRange>} buffered
+ * @property {!Array<TimeRange>} buffered
  *   The buffered ranges for the test.
  * @property {number} start
  *   The time to start playing at.
@@ -60,8 +60,8 @@ let PlayingTestInfo;
 
 /**
  * @typedef {{
- *   buffered: !Array.<TimeRange>,
- *   newBuffered: (!Array.<TimeRange>|undefined),
+ *   buffered: !Array<TimeRange>,
+ *   newBuffered: (!Array<TimeRange>|undefined),
  *   start: number,
  *   seekTo: number,
  *   expectedEndTime: number,
@@ -77,9 +77,9 @@ let PlayingTestInfo;
  * large, we should get a 'largegap' event from the Playhead, which we may
  * optionally suppress.
  *
- * @property {!Array.<TimeRange>} buffered
+ * @property {!Array<TimeRange>} buffered
  *   The buffered ranges for the test.
- * @property {(!Array.<TimeRange>|undefined)} newBuffered
+ * @property {(!Array<TimeRange>|undefined)} newBuffered
  *   Used in the unbuffered seek tests.  Represents the buffered ranges to
  *   use after the seek.
  * @property {number} start

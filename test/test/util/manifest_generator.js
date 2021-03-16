@@ -88,13 +88,13 @@ shaka.test.ManifestGenerator.Manifest = class {
     /** @private {shakaNamespaceType} */
     this.shaka_ = compiledShaka || window['shaka'];
 
-    /** @type {!Array.<shaka.extern.Variant>} */
+    /** @type {!Array<shaka.extern.Variant>} */
     this.variants = [];
 
-    /** @type {!Array.<shaka.extern.Stream>} */
+    /** @type {!Array<shaka.extern.Stream>} */
     this.textStreams = [];
 
-    /** @type {!Array.<shaka.extern.Stream>} */
+    /** @type {!Array<shaka.extern.Stream>} */
     this.imageStreams = [];
 
     const timeline = new this.shaka_.media.PresentationTimeline(0, 0);
@@ -103,7 +103,7 @@ shaka.test.ManifestGenerator.Manifest = class {
 
     /** @type {!shaka.media.PresentationTimeline} */
     this.presentationTimeline = timeline;
-    /** @type {!Array.<string>} */
+    /** @type {!Array<string>} */
     this.offlineSessionIds = [];
     /** @type {number} */
     this.minBufferTime = 0;
@@ -281,7 +281,7 @@ shaka.test.ManifestGenerator.Variant = class {
       this.allowedByApplication = true;
       /** @type {boolean} */
       this.allowedByKeySystem = true;
-      /** @type {!Array.<MediaCapabilitiesDecodingInfo>} */
+      /** @type {!Array<MediaCapabilitiesDecodingInfo>} */
       this.decodingInfos = [];
     }
 
@@ -401,9 +401,9 @@ shaka.test.ManifestGenerator.DrmInfo = class {
     this.videoRobustness = '';
     /** @type {Uint8Array} */
     this.serverCertificate = null;
-    /** @type {Array.<shaka.extern.InitDataOverride>} */
+    /** @type {Array<shaka.extern.InitDataOverride>} */
     this.initData = null;
-    /** @type {Set.<string>} */
+    /** @type {Set<string>} */
     this.keyIds = new Set();
 
     /** @type {shaka.extern.DrmInfo} */
@@ -518,9 +518,9 @@ shaka.test.ManifestGenerator.Stream = class {
       this.kind = undefined;
       /** @type {boolean} */
       this.encrypted = false;
-      /** @type {!Array.<shaka.extern.DrmInfo>} */
+      /** @type {!Array<shaka.extern.DrmInfo>} */
       this.drmInfos = [];
-      /** @type {!Set.<string>} */
+      /** @type {!Set<string>} */
       this.keyIds = new Set();
       /** @type {string} */
       this.language = lang || 'und';
@@ -530,9 +530,9 @@ shaka.test.ManifestGenerator.Stream = class {
       this.primary = false;
       /** @type {?shaka.extern.Stream} */
       this.trickModeVideo = null;
-      /** @type {Array.<string>} */
+      /** @type {Array<string>} */
       this.emsgSchemeIdUris = null;
-      /** @type {!Array.<string>} */
+      /** @type {!Array<string>} */
       this.roles = [];
       /** @type {boolean} */
       this.forced = false;
@@ -542,7 +542,7 @@ shaka.test.ManifestGenerator.Stream = class {
       this.audioSamplingRate = null;
       /** @type {boolean} */
       this.spatialAudio = false;
-      /** @type {Map.<string, string>} */
+      /** @type {Map<string, string>} */
       this.closedCaptions = null;
       /** @type {(string|undefined)} */
       this.hdr = undefined;
@@ -646,7 +646,7 @@ shaka.test.ManifestGenerator.Stream = class {
   /**
    * Sets the init segment of the current stream.
    *
-   * @param {!Array.<string>} uris
+   * @param {!Array<string>} uris
    * @param {number} startByte
    * @param {?number} endByte
    */

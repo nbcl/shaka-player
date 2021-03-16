@@ -191,8 +191,8 @@ describe('AdaptationSet', () => {
   /**
    * @param {number} id
    * @param {string} mimeType
-   * @param {!Array.<string>} codecs
-   * @param {!Array.<string>} roles
+   * @param {!Array<string>} codecs
+   * @param {!Array<string>} roles
    * @param {?number} channelsCount
    * @return {shaka.extern.Stream}
    */

@@ -27,7 +27,7 @@ shaka.extern.IAbortableOperation = function() {};
  * aborted.  Aborted operations should be rejected with a shaka.util.Error
  * object using the error code OPERATION_ABORTED.
  *
- * @const {!Promise.<T>}
+ * @const {!Promise<T>}
  * @exportDoc
  */
 shaka.extern.IAbortableOperation.prototype.promise;
@@ -50,7 +50,7 @@ shaka.extern.IAbortableOperation.prototype.abort = function() {};
  * @param {function(boolean)} onFinal A callback to be invoked after the
  *   operation succeeds or fails.  The boolean argument is true if the operation
  *   succeeded and false if it failed.
- * @return {!shaka.extern.IAbortableOperation.<T>} Returns this.
+ * @return {!shaka.extern.IAbortableOperation<T>} Returns this.
  * @exportDoc
  */
 shaka.extern.IAbortableOperation.prototype.finally = function(onFinal) {};

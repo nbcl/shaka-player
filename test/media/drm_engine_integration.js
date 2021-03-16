@@ -29,7 +29,7 @@ describe('DrmEngine', () => {
   const audioInitSegmentUri = '/base/test/test/assets/multidrm-audio-init.mp4';
   const audioSegmentUri = '/base/test/test/assets/multidrm-audio-segment.mp4';
 
-  /** @type {!Object.<string, ?shaka.extern.DrmSupportType>} */
+  /** @type {!Object<string, ?shaka.extern.DrmSupportType>} */
   let support = {};
 
   /** @type {!HTMLVideoElement} */

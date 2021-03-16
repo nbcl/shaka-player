@@ -198,7 +198,7 @@ describe('MediaSourceEngine', () => {
   });
 
   it('queues operations', async () => {
-    /** @type {!Array.<number>} */
+    /** @type {!Array<number>} */
     const resolutionOrder = [];
     /** @type {!Array.<!Promise>} */
     const requests = [];

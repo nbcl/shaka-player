@@ -43,7 +43,7 @@ shaka.test.FakeAbrManager = class {
     /** @type {number} */
     this.chooseIndex = 0;
 
-    /** @type {!Array.<shaka.extern.Variant>} */
+    /** @type {!Array<shaka.extern.Variant>} */
     this.variants = [];
 
     /** @type {shaka.extern.AbrManager.SwitchCallback} */
@@ -170,7 +170,7 @@ shaka.test.FakeManifestParser = class {
 shaka.test.FakeVideo = class {
   /** @param {number=} currentTime */
   constructor(currentTime) {
-    /** @const {!Object.<string, !Function>} */
+    /** @const {!Object<string, !Function>} */
     this.on = {};  // event listeners
     /** @type {!Array.<!TextTrack>} */
     this.textTracks = [];
@@ -349,7 +349,7 @@ shaka.test.FakePlayhead = class {
 /** @extends {TextTrack} */
 shaka.test.FakeTextTrack = class {
   constructor() {
-    /** @type {!Array.<TextTrackCue>} */
+    /** @type {!Array<TextTrackCue>} */
     this.cues = [];
 
     /** @type {!jasmine.Spy} */

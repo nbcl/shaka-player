@@ -22,10 +22,10 @@ filterDescribe('IndexeddbStorageCell', () => window.indexedDB, () => {
 
   const noop = () => {};
 
-  /** @type {!Array.<shaka.extern.StorageCell>} */
+  /** @type {!Array<shaka.extern.StorageCell>} */
   let cells = [];
 
-  /** @type {!Array.<IDBDatabase>} */
+  /** @type {!Array<IDBDatabase>} */
   let connections = [];
 
   beforeEach(() => {
@@ -45,7 +45,7 @@ filterDescribe('IndexeddbStorageCell', () => window.indexedDB, () => {
   });
 
   it('can add, get, and remove segments', async () => {
-    /** @type {!Array.<shaka.extern.SegmentDataDB>} */
+    /** @type {!Array<shaka.extern.SegmentDataDB>} */
     const segments = [
       OfflineUtils.createSegmentData([0]),
       OfflineUtils.createSegmentData([0, 1]),
@@ -79,7 +79,7 @@ filterDescribe('IndexeddbStorageCell', () => window.indexedDB, () => {
   });
 
   it('can add, get, and remove manifests', async () => {
-    /** @type {!Array.<shaka.extern.ManifestDB>} */
+    /** @type {!Array<shaka.extern.ManifestDB>} */
     const manifests = [
       OfflineUtils.createManifest('original-uri-1'),
       OfflineUtils.createManifest('original-uri-2'),
@@ -112,7 +112,7 @@ filterDescribe('IndexeddbStorageCell', () => window.indexedDB, () => {
   });
 
   it('can add and get all manifests', async () => {
-    /** @type {!Array.<shaka.extern.ManifestDB>} */
+    /** @type {!Array<shaka.extern.ManifestDB>} */
     const manifests = [
       OfflineUtils.createManifest('original-uri-1'),
       OfflineUtils.createManifest('original-uri-2'),
@@ -164,7 +164,7 @@ filterDescribe('IndexeddbStorageCell', () => window.indexedDB, () => {
   });
 
   /**
-   * @return {!Promise.<IDBDatabase>}
+   * @return {!Promise<IDBDatabase>}
    */
   async function makeConnection() {
     const upgrade = (db) => {

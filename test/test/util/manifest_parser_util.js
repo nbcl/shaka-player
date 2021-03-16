@@ -15,7 +15,7 @@ shaka.test.ManifestParser = class {
    * Verifies the segment references of a stream.
    *
    * @param {?shaka.extern.Stream} stream
-   * @param {!Array.<shaka.media.SegmentReference>} references
+   * @param {!Array<shaka.media.SegmentReference>} references
    */
   static verifySegmentIndex(stream, references) {
     expect(stream).toBeTruthy();

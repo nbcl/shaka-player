@@ -55,15 +55,15 @@ const ShakaDemoAssetInfo = class {
     this.drm = [shakaAssets.KeySystem.CLEAR];
     /** @type {!Array.<!shakaAssets.Feature>} */
     this.features = [shakaAssets.Feature.VOD];
-    /** @type {!Map.<string, string>} */
+    /** @type {!Map<string, string>} */
     this.licenseServers = new Map();
-    /** @type {!Map.<string, string>} */
+    /** @type {!Map<string, string>} */
     this.licenseRequestHeaders = new Map();
     /** @type {?shaka.extern.RequestFilter} */
     this.requestFilter = null;
     /** @type {?shaka.extern.ResponseFilter} */
     this.responseFilter = null;
-    /** @type {!Map.<string, string>} */
+    /** @type {!Map<string, string>} */
     this.clearKeys = new Map(); // TODO: Setter method?
     /** @type {?Object} */
     this.extraConfig = null;
@@ -379,7 +379,7 @@ const ShakaDemoAssetInfo = class {
   }
 
   /**
-   * @param {!Map.<string, string>} headers
+   * @param {!Map<string, string>} headers
    * @param {shaka.net.NetworkingEngine.RequestType} requestType
    * @param {shaka.extern.Request} request
    * @private

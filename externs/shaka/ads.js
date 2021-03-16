@@ -11,7 +11,7 @@
 
 /**
  * @typedef {{
- *   loadTimes: !Array.<number>,
+ *   loadTimes: !Array<number>,
  *   started: number,
  *   playedCompletely: number,
  *   skipped: number

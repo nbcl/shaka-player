@@ -30,7 +30,7 @@ muxjs.mp4.probe = class {
    * values for any declared tracks.
    *
    * @param {Uint8Array} init The bytes of the init segment
-   * @return {!Object.<number, number>} a hash of track ids to timescale
+   * @return {!Object<number, number>} a hash of track ids to timescale
    * values or null if the init segment is malformed.
    */
   static timescale(init) {}
@@ -40,7 +40,7 @@ muxjs.mp4.probe = class {
     * Found by parsing the Handler Reference and Track Header Boxes:
     *
     * @param {Uint8Array} init The bytes of the init segment for this source
-    * @return {!Array.<number>} A list of trackIds
+    * @return {!Array<number>} A list of trackIds
    **/
   static videoTrackIds(init) {}
 };
@@ -109,9 +109,9 @@ muxjs.mp4.CaptionParser = class {
   /**
    * Return true if a new video track is selected or if the timescale is
    * changed.
-   * @param {!Array.<number>} videoTrackIds A list of video tracks found in the
+   * @param {!Array<number>} videoTrackIds A list of video tracks found in the
    *    init segment.
-   * @param {!Object.<number, number>} timescales The map of track Ids and the
+   * @param {!Object<number, number>} timescales The map of track Ids and the
    *    tracks' timescales in the init segment.
    * @return {boolean}
    */
@@ -121,9 +121,9 @@ muxjs.mp4.CaptionParser = class {
    * Parses embedded CEA closed captions and interacts with the underlying
    * CaptionStream, and return the parsed captions.
    * @param {!Uint8Array} segment The fmp4 segment containing embedded captions
-   * @param {!Array.<number>} videoTrackIds A list of video tracks found in the
+   * @param {!Array<number>} videoTrackIds A list of video tracks found in the
    *    init segment.
-   * @param {!Object.<number, number>} timescales The timescales found in the
+   * @param {!Object<number, number>} timescales The timescales found in the
    *    init segment.
    * @return {muxjs.mp4.ParsedClosedCaptions}
    */
@@ -139,13 +139,13 @@ muxjs.mp4.CaptionParser = class {
 
 /**
  * @typedef {{
- *   captionStreams: Object.<string, boolean>,
- *   captions: !Array.<muxjs.mp4.ClosedCaption>
+ *   captionStreams: Object<string, boolean>,
+ *   captions: !Array<muxjs.mp4.ClosedCaption>
  * }}
  *
  * @description closed captions data parsed from mux.js caption parser.
- * @property {Object.<string, boolean>} captionStreams
- * @property {Array.<muxjs.mp4.ClosedCaption>} captions
+ * @property {Object<string, boolean>} captionStreams
+ * @property {Array<muxjs.mp4.ClosedCaption>} captions
  */
 muxjs.mp4.ParsedClosedCaptions;
 
@@ -177,7 +177,7 @@ muxjs.mp4.ClosedCaption;
  *   data: !Uint8Array,
  *   dispatchType: string,
  *   dts: number,
- *   frames: !Array.<muxjs.mp4.MetadataFrame>,
+ *   frames: !Array<muxjs.mp4.MetadataFrame>,
  *   pts: number
  * }}
  *

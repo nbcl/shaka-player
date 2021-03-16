@@ -92,7 +92,7 @@ google.ima.AdsManager = class {
   resize(width, height, viewMode) {}
 
   /**
-   * @return {!Array.<number>}
+   * @return {!Array<number>}
    */
   getCuePoints() {}
 

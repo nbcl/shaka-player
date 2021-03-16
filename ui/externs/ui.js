@@ -61,8 +61,8 @@ shaka.extern.UIVolumeBarColors;
  * The UI's configuration options.
  *
  * @typedef {{
- *   controlPanelElements: !Array.<string>,
- *   overflowMenuButtons: !Array.<string>,
+ *   controlPanelElements: !Array<string>,
+ *   overflowMenuButtons: !Array<string>,
  *   addSeekBar: boolean,
  *   addBigPlayButton: boolean,
  *   castReceiverAppId: string,
@@ -78,9 +78,9 @@ shaka.extern.UIVolumeBarColors;
  *   forceLandscapeOnFullscreen: boolean
  * }}
  *
- * @property {!Array.<string>} controlPanelElements
+ * @property {!Array<string>} controlPanelElements
  *   The ordered list of control panel elements of the UI.
- * @property {!Array.<string>} overflowMenuButtons
+ * @property {!Array<string>} overflowMenuButtons
  *   The ordered list of the overflow menu buttons.
  * @property {boolean} addSeekBar
  *   Whether or not a seek bar should be part of the UI.
@@ -254,8 +254,8 @@ shaka.extern.IUIRangeElement = class {
   /**
    * @param {!HTMLElement} parent
    * @param {!shaka.ui.Controls} controls
-   * @param {!Array.<string>} containerClassNames
-   * @param {!Array.<string>} barClassNames
+   * @param {!Array<string>} containerClassNames
+   * @param {!Array<string>} barClassNames
    */
   constructor(parent, controls, containerClassNames, barClassNames) {
     /**

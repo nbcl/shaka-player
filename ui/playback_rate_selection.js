@@ -47,7 +47,7 @@ shaka.ui.PlaybackRateSelection = class extends shaka.ui.SettingsMenu {
       this.updatePlaybackRateSelection_(this.player.getPlaybackRate());
     });
 
-    /** @type {!Map.<string, number>} */
+    /** @type {!Map<string, number>} */
     this.playbackRates_ = new Map([
       ['0.5x', 0.5],
       ['0.75x', 0.75],

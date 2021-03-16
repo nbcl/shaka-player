@@ -46,20 +46,20 @@ shaka.offline.Storage.prototype.configure({
 });
 
 // Store content and metadata.
-shaka.offline.Storage.prototype.store(manifestUri, appMetadata, manifestParser) => Promise.<StoredContent>
+shaka.offline.Storage.prototype.store(manifestUri, appMetadata, manifestParser) => Promise<StoredContent>
 
 // Remove stored content and metadata.
 shaka.offline.Storage.prototype.remove(storedContent) => Promise
 
 // List stored content.
-shaka.offline.Storage.prototype.list() => Promise.<Array.<StoredContent>>
+shaka.offline.Storage.prototype.list() => Promise<Array<StoredContent>>
 
 StoredContent:
   offlineUri: string  // at which the stored content can be accessed
   originalManifestUri: string  // the original manifest URI of the content we stored
   duration: number  // length of the stored content in seconds
   size: number  // size of the stored content in bytes
-  tracks: !Array.<shaka.extern.Track>  // the tracks we stored
+  tracks: !Array<shaka.extern.Track>  // the tracks we stored
   appMetadata: object  // arbitrary format, provided by the application to store()
 ```
 

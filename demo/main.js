@@ -52,7 +52,7 @@ shakaDemo.Main = class {
     /** @private {?shaka.ui.Controls} */
     this.controls_ = null;
 
-    /** @private {?Array.<shaka.extern.StoredContent>} */
+    /** @private {?Array<shaka.extern.StoredContent>} */
     this.initialStoredList_;
 
     /** @private {boolean} */
@@ -250,7 +250,7 @@ shakaDemo.Main = class {
 
   /**
    * @param {string} url
-   * @return {!Promise.<string>}
+   * @return {!Promise<string>}
    * @private
    */
   async loadText_(url) {
@@ -816,7 +816,7 @@ shakaDemo.Main = class {
 
       try {
         const text = await this.loadText_(url);
-        const obj = /** @type {!Object.<string, string>} */(JSON.parse(text));
+        const obj = /** @type {!Object<string, string>} */(JSON.parse(text));
         const map = new Map(Object.entries(obj));
         this.localization_.insert(locale, map);
       } catch (error) {
@@ -1015,7 +1015,7 @@ shakaDemo.Main = class {
   }
 
   /**
-   * @return {!Object.<string, string>} params
+   * @return {!Object<string, string>} params
    * @private
    */
   getParams_() {
@@ -1028,7 +1028,7 @@ shakaDemo.Main = class {
     // Because they are being concatenated in this order, if both an
     // URL fragment and an URL parameter of the same type are present
     // the URL fragment takes precendence.
-    /** @type {!Array.<string>} */
+    /** @type {!Array<string>} */
     const combined = fields.concat(fragments);
     const params = {};
     for (const line of combined) {
@@ -1474,7 +1474,7 @@ shakaDemo.Main = class {
 
   /**
    * @param {ShakaDemoAssetInfo} asset
-   * @return {!Promise.<string>}
+   * @return {!Promise<string>}
    * @private
    */
   async getManifestUriFromAdManager_(asset) {
@@ -1733,7 +1733,7 @@ shakaDemo.Main = class {
 };
 
 
-/** @type {!Array.<string>} */
+/** @type {!Array<string>} */
 shakaDemo.Main.commonDrmSystems = [
   'com.widevine.alpha',
   'com.microsoft.playready',

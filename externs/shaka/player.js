@@ -82,8 +82,8 @@ shaka.extern.StateChange;
  *
  *   maxSegmentDuration: number,
  *
- *   switchHistory: !Array.<shaka.extern.TrackChoice>,
- *   stateHistory: !Array.<shaka.extern.StateChange>
+ *   switchHistory: !Array<shaka.extern.TrackChoice>,
+ *   stateHistory: !Array<shaka.extern.StateChange>
  * }}
  *
  * @description
@@ -139,9 +139,9 @@ shaka.extern.StateChange;
  * @property {number} maxSegmentDuration
  *   The presentation's max segment duration in seconds, or NaN.
  *
- * @property {!Array.<shaka.extern.TrackChoice>} switchHistory
+ * @property {!Array<shaka.extern.TrackChoice>} switchHistory
  *   A history of the stream changes.
- * @property {!Array.<shaka.extern.StateChange>} stateHistory
+ * @property {!Array<shaka.extern.StateChange>} stateHistory
  *   A history of the state changes.
  * @exportDoc
  */
@@ -168,23 +168,23 @@ shaka.extern.BufferedRange;
 
 /**
  * @typedef {{
- *   total: !Array.<shaka.extern.BufferedRange>,
- *   audio: !Array.<shaka.extern.BufferedRange>,
- *   video: !Array.<shaka.extern.BufferedRange>,
- *   text: !Array.<shaka.extern.BufferedRange>
+ *   total: !Array<shaka.extern.BufferedRange>,
+ *   audio: !Array<shaka.extern.BufferedRange>,
+ *   video: !Array<shaka.extern.BufferedRange>,
+ *   text: !Array<shaka.extern.BufferedRange>
  * }}
  *
  * @description
  * Contains information about the current buffered ranges.
  *
- * @property {!Array.<shaka.extern.BufferedRange>} total
+ * @property {!Array<shaka.extern.BufferedRange>} total
  *   The combined audio/video buffered ranges, reported by
  *   <code>video.buffered</code>.
- * @property {!Array.<shaka.extern.BufferedRange>} audio
+ * @property {!Array<shaka.extern.BufferedRange>} audio
  *   The buffered ranges for audio content.
- * @property {!Array.<shaka.extern.BufferedRange>} video
+ * @property {!Array<shaka.extern.BufferedRange>} video
  *   The buffered ranges for video content.
- * @property {!Array.<shaka.extern.BufferedRange>} text
+ * @property {!Array<shaka.extern.BufferedRange>} text
  *   The buffered ranges for text content.
  * @exportDoc
  */
@@ -212,8 +212,8 @@ shaka.extern.BufferedInfo;
  *   audioCodec: ?string,
  *   videoCodec: ?string,
  *   primary: boolean,
- *   roles: !Array.<string>,
- *   audioRoles: Array.<string>,
+ *   roles: !Array<string>,
+ *   audioRoles: Array<string>,
  *   forced: boolean,
  *   videoId: ?number,
  *   audioId: ?number,
@@ -279,10 +279,10 @@ shaka.extern.BufferedInfo;
  *   This can be a useful hint about which language should be the default, and
  *   indicates which track Shaka will use when the user's language preference
  *   cannot be satisfied.
- * @property {!Array.<string>} roles
+ * @property {!Array<string>} roles
  *   The roles of the track, e.g. <code>'main'</code>, <code>'caption'</code>,
  *   or <code>'commentary'</code>.
- * @property {Array.<string>} audioRoles
+ * @property {Array<string>} audioRoles
  *   The roles of the audio in the track, e.g. <code>'main'</code> or
  *   <code>'commentary'</code>. Will be null for text tracks or variant tracks
  *   without audio.
@@ -400,21 +400,21 @@ shaka.extern.DrmSupportType;
 
 /**
  * @typedef {{
- *   manifest: !Object.<string, boolean>,
- *   media: !Object.<string, boolean>,
- *   drm: !Object.<string, ?shaka.extern.DrmSupportType>
+ *   manifest: !Object<string, boolean>,
+ *   media: !Object<string, boolean>,
+ *   drm: !Object<string, ?shaka.extern.DrmSupportType>
  * }}
  *
  * @description
  * An object detailing browser support for various features.
  *
- * @property {!Object.<string, boolean>} manifest
+ * @property {!Object<string, boolean>} manifest
  *   A map of supported manifest types.
  *   The keys are manifest MIME types and file extensions.
- * @property {!Object.<string, boolean>} media
+ * @property {!Object<string, boolean>} media
  *   A map of supported media types.
  *   The keys are media MIME types.
- * @property {!Object.<string, ?shaka.extern.DrmSupportType>} drm
+ * @property {!Object<string, ?shaka.extern.DrmSupportType>} drm
  *   A map of supported key systems.
  *   The keys are the key system names.  The value is <code>null</code> if it is
  *   not supported.  Key systems not probed will not be in this dictionary.
@@ -425,7 +425,7 @@ shaka.extern.SupportType;
 
 
 /**
- * @typedef {!Object.<string, ?>}
+ * @typedef {!Object<string, ?>}
  *
  * @description
  * ID3 metadata in format defined by
@@ -556,10 +556,10 @@ shaka.extern.AdvancedDrmConfiguration;
 /**
  * @typedef {{
  *   retryParameters: shaka.extern.RetryParameters,
- *   servers: !Object.<string, string>,
- *   clearKeys: !Object.<string, string>,
+ *   servers: !Object<string, string>,
+ *   clearKeys: !Object<string, string>,
  *   delayLicenseRequestUntilPlayed: boolean,
- *   advanced: Object.<string, shaka.extern.AdvancedDrmConfiguration>,
+ *   advanced: Object<string, shaka.extern.AdvancedDrmConfiguration>,
  *   initDataTransform:
  *       ((function(!Uint8Array, string, ?shaka.extern.DrmInfo):!Uint8Array)|
  *         undefined),
@@ -569,19 +569,19 @@ shaka.extern.AdvancedDrmConfiguration;
  *
  * @property {shaka.extern.RetryParameters} retryParameters
  *   Retry parameters for license requests.
- * @property {!Object.<string, string>} servers
+ * @property {!Object<string, string>} servers
  *   <i>Required for all but the clear key CDM.</i> <br>
  *   A dictionary which maps key system IDs to their license servers.
  *   For example,
  *   <code>{'com.widevine.alpha': 'https://example.com/drm'}</code>.
- * @property {!Object.<string, string>} clearKeys
+ * @property {!Object<string, string>} clearKeys
  *   <i>Forces the use of the Clear Key CDM.</i>
  *   A map of key IDs (hex) to keys (hex).
  * @property {boolean} delayLicenseRequestUntilPlayed
  *   <i>Defaults to false.</i> <br>
  *   True to configure drm to delay sending a license request until a user
  *   actually starts playing content.
- * @property {Object.<string, shaka.extern.AdvancedDrmConfiguration>} advanced
+ * @property {Object<string, shaka.extern.AdvancedDrmConfiguration>} advanced
  *   <i>Optional.</i> <br>
  *   A dictionary which maps key system IDs to advanced DRM configuration for
  *   those key systems.
@@ -1041,7 +1041,7 @@ shaka.extern.LanguageRole;
  *   height: number,
  *   positionX: number,
  *   positionY: number,
- *   uris: !Array.<string>,
+ *   uris: !Array<string>,
  *   width: number
  * }}
  *
@@ -1051,7 +1051,7 @@ shaka.extern.LanguageRole;
  *    The thumbnail left position in px.
  * @property {number} positionY
  *    The thumbnail top position in px.
- * @property {!Array.<string>} uris
+ * @property {!Array<string>} uris
  *   An array of URIs to attempt.  They will be tried in the order they are
  *   given.
  * @property {number} width

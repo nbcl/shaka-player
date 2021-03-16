@@ -764,7 +764,7 @@ goog.Uri.QueryData.prototype.ensureKeyMapInitialized_ = function() {
  * We need to use a Map because we cannot guarantee that the key names will
  * not be problematic for IE.
  *
- * @type {Object.<string, !Array.<string>>}
+ * @type {Object<string, !Array<string>>}
  * @private
  */
 goog.Uri.QueryData.prototype.keyMap_ = null;

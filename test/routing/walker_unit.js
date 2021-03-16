@@ -410,7 +410,7 @@ describe('Walker', () => {
   /**
    * Get the series of nodes that the walker went through during its "journey".
    *
-   * @return {!Array.<shaka.routing.Node>}
+   * @return {!Array<shaka.routing.Node>}
    */
   function getStepsTaken() {
     // Use |onNode| to get the steps that completed.

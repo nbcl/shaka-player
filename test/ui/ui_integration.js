@@ -127,9 +127,9 @@ describe('UI', () => {
   });
 
   describe('language selections', () => {
-    /** @type {!Map.<string, !HTMLElement>} */
+    /** @type {!Map<string, !HTMLElement>} */
     let languagesToButtons;
-    /** @type {!Array.<string>} */
+    /** @type {!Array<string>} */
     let langsFromContent;
     /** @type {!Array.<!HTMLElement>} */
     let languageButtons;
@@ -243,7 +243,7 @@ describe('UI', () => {
     });  // describe('caption selection')
 
     /**
-     * @param {!Array.<shaka.extern.LanguageRole>} languagesAndRoles
+     * @param {!Array<shaka.extern.LanguageRole>} languagesAndRoles
      */
     function setupLanguageTests(languagesAndRoles) {
       langsFromContent = languagesAndRoles.map((langAndRole) => {
@@ -327,9 +327,9 @@ describe('UI', () => {
   });  // describe('language selections')
 
   describe('resolution selection', () => {
-    /** @type {!Map.<number, !HTMLElement>} */
+    /** @type {!Map<number, !HTMLElement>} */
     let resolutionsToButtons;
-    /** @type {!Array.<number>} */
+    /** @type {!Array<number>} */
     let resolutionsFromContent;
     /** @type {!Array.<!HTMLElement>} */
     let resolutionButtons;
@@ -339,7 +339,7 @@ describe('UI', () => {
     let oldResolution;
     /** @type {number} */
     let newResolution;
-    /** @type {!Array.<shaka.extern.Track>} */
+    /** @type {!Array<shaka.extern.Track>} */
     let tracks;
     /** @type {string} */
     let preferredLanguage;
@@ -630,9 +630,9 @@ describe('UI', () => {
 
   /**
     * @param {!Array.<!HTMLElement>} buttons
-    * @param {!Array.<string>} choices
+    * @param {!Array<string>} choices
     * @param {function(string):string|function(number):string} modifier
-    * @return {!Map.<string, !HTMLElement>|!Map.<number, !HTMLElement>}
+    * @return {!Map<string, !HTMLElement>|!Map<number, !HTMLElement>}
     */
   function mapChoicesToButtons(buttons, choices, modifier) {
     expect(buttons.length).toBe(choices.length);
@@ -658,7 +658,7 @@ describe('UI', () => {
    * Filter out buttons with given classes.
    *
    * @param {!NodeList} buttons
-   * @param {!Array.<string>} excludeClasses
+   * @param {!Array<string>} excludeClasses
    * @return {!Array.<!HTMLElement>}
    */
   function filterButtons(buttons, excludeClasses) {
@@ -678,7 +678,7 @@ describe('UI', () => {
    * Make sure elements from content match their UI representation.
    * (The order doesn't matter).
    *
-   * @param {!Array.<string>} elementsFromContent
+   * @param {!Array<string>} elementsFromContent
    * @param {!Array.<!HTMLElement>} elementsFromUI
    */
   function verifyItems(elementsFromContent, elementsFromUI) {

@@ -618,7 +618,7 @@ shakaDemo.Config = class {
 
   /**
    * @param {!shakaDemo.MessageIds} name
-   * @param {!Array.<string>} values
+   * @param {!Array<string>} values
    * @param {function(!HTMLInputElement)} onChange
    * @param {shakaDemo.MessageIds=} tooltipMessage
    * @return {!shakaDemo.Config}
@@ -634,7 +634,7 @@ shakaDemo.Config = class {
 
   /**
    * @param {!shakaDemo.MessageIds} name
-   * @param {!Object.<string, string>} values
+   * @param {!Object<string, string>} values
    * @param {function(!HTMLInputElement)} onChange
    * @param {shakaDemo.MessageIds=} tooltipMessage
    * @return {!shakaDemo.Config}

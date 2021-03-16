@@ -60,7 +60,7 @@ shaka.extern.ManifestParser = class {
    * @param {shaka.extern.ManifestParser.PlayerInterface} playerInterface
    *    The player interface contains the callbacks and members that the parser
    *    can use to communicate with the player and outside world.
-   * @return {!Promise.<shaka.extern.Manifest>}
+   * @return {!Promise<shaka.extern.Manifest>}
    * @exportDoc
    */
   start(uri, playerInterface) {}

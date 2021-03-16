@@ -33,7 +33,7 @@ function storageSupport() {
   return shaka.offline.Storage.support();
 }
 
-/** @return {!Promise.<boolean>} */
+/** @return {!Promise<boolean>} */
 async function drmStorageSupport() {
   if (!shaka.offline.Storage.support()) {
     return false;
@@ -482,7 +482,7 @@ filterDescribe('Storage', storageSupport, () => {
     /** @type {!shaka.offline.Storage} */
     let storage;
 
-    /** @type {!Object.<string, function():!Promise.<ArrayBuffer>>} */
+    /** @type {!Object<string, function():!Promise<ArrayBuffer>>} */
     let fakeResponses = {};
 
     let compiledShaka;
@@ -587,7 +587,7 @@ filterDescribe('Storage', storageSupport, () => {
        * Since the audio stream has smaller segments, its contribution to
        * the overall progress is much smaller than the video stream segments.
        *
-       * @type {!Array.<number>}
+       * @type {!Array<number>}
        */
       const progressSteps = [
         0.057, 0.250, 0.307, 0.500, 0.557, 0.750, 0.807, 1.000,
@@ -611,7 +611,7 @@ filterDescribe('Storage', storageSupport, () => {
            * In this example we see a larger difference between the audio and
            * video contributions to progress.
            *
-           * @type {!Array.<number>}
+           * @type {!Array<number>}
            */
           const progressSteps = [
             0.241, 0.250, 0.491, 0.500, 0.741, 0.750, 0.991, 1.000,
@@ -625,14 +625,14 @@ filterDescribe('Storage', storageSupport, () => {
      * |expectedProgressSteps|.
      *
      * @param {shaka.extern.Manifest} manifest
-     * @param {!Array.<number>} expectedProgressSteps
+     * @param {!Array<number>} expectedProgressSteps
      */
     async function runProgressTest(manifest, expectedProgressSteps) {
       /**
        * Create a copy of the array so that we are not modifying the original
        * while we are tracking progress.
        *
-       * @type {!Array.<number>}
+       * @type {!Array<number>}
        */
       const remainingProgress = expectedProgressSteps.slice();
 
@@ -778,7 +778,7 @@ filterDescribe('Storage', storageSupport, () => {
     });
 
     it('stores and lists content', async () => {
-      /** @type {!Array.<string>} */
+      /** @type {!Array<string>} */
       const manifestUris = [
         manifestWithPerStreamBandwidthUri,
         manifestWithoutPerStreamBandwidthUri,
@@ -1235,7 +1235,7 @@ filterDescribe('Storage', storageSupport, () => {
           content.offlineUri != null, 'URI should not be null!');
 
       /**
-       * @type {!Array.<number>}
+       * @type {!Array<number>}
        */
       const progressSteps = [
         0.111, 0.222, 0.333, 0.444, 0.555, 0.666, 0.777, 0.888, 1.0,
@@ -1512,7 +1512,7 @@ filterDescribe('Storage', storageSupport, () => {
 
   /**
    * @param {shaka.extern.Manifest} manifest
-   * @return {!Array.<shaka.extern.Stream>}
+   * @return {!Array<shaka.extern.Stream>}
    */
   function getAllStreams(manifest) {
     const streams = [];
@@ -1534,7 +1534,7 @@ filterDescribe('Storage', storageSupport, () => {
 
   /**
    * @param {shaka.extern.Stream} stream
-   * @param {!Array.<shaka.media.SegmentReference>} segments
+   * @param {!Array<shaka.media.SegmentReference>} segments
    */
   function overrideSegmentIndex(stream, segments) {
     const index = new shaka.media.SegmentIndex(segments);
@@ -1635,7 +1635,7 @@ filterDescribe('Storage', storageSupport, () => {
   /**
    * @param {!shaka.media.DrmEngine} drmEngine
    * @param {string} sessionName
-   * @return {!Promise.<MediaKeySession>}
+   * @return {!Promise<MediaKeySession>}
    *
    * @suppress {accessControls}
    */
@@ -1645,7 +1645,7 @@ filterDescribe('Storage', storageSupport, () => {
 
   /**
    * @param {!shaka.offline.OfflineUri} uri
-   * @return {!Promise.<shaka.extern.Manifest>}
+   * @return {!Promise<shaka.extern.Manifest>}
    */
   async function getStoredManifest(uri) {
     /** @type {!shaka.offline.ManifestConverter} */

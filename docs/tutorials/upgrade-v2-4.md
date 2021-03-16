@@ -369,7 +369,7 @@ use this information if desired.
 
 In v2.3, the `request()` method on `shaka.net.NetworkingEngine` returned a
 `Promise`.  In v2.5, it returns an implementation of
-`IAbortableOperation.<shaka.extern.Response>`, which contains a `Promise`.
+`IAbortableOperation<shaka.extern.Response>`, which contains a `Promise`.
 
 All applications which make application-level requests via `NetworkingEngine`
 MUST update to the new API.  The old API was removed in v2.5.

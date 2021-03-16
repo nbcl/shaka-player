@@ -174,7 +174,7 @@ shaka.ui.Controls = class extends shaka.util.FakeEventTarget {
      * The pressed keys set is used to record which keys are currently pressed
      * down, so we can know what keys are pressed at the same time.
      * Used by the focusInsideOverflowMenu_() function.
-     * @private {!Set.<string>}
+     * @private {!Set<string>}
      */
     this.pressedKeys_ = new Set();
 
@@ -1506,7 +1506,7 @@ shaka.ui.Controls = class extends shaka.util.FakeEventTarget {
   }
 };
 
-/** @private {!Map.<string, !shaka.extern.IUIElement.Factory>} */
+/** @private {!Map<string, !shaka.extern.IUIElement.Factory>} */
 shaka.ui.ControlsPanel.elementNamesToFactories_ = new Map();
 
 /** @private {?shaka.extern.IUISeekBar.Factory} */

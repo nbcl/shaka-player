@@ -17,7 +17,7 @@ goog.require('shaka.test.Util');
  */
 shaka.test.FakeDrmEngine = class {
   constructor() {
-    /** @private {!Array.<number>} */
+    /** @private {!Array<number>} */
     this.offlineSessions_ = [];
     /** @private {?shaka.extern.DrmInfo} */
     this.drmInfo_ = null;
@@ -90,7 +90,7 @@ shaka.test.FakeDrmEngine = class {
   }
 
   /**
-   * @param {!Array.<number>} sessions
+   * @param {!Array<number>} sessions
    */
   setSessionIds(sessions) {
     // Copy the values to break the reference to the input value.

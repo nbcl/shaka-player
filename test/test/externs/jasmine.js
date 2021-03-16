@@ -350,7 +350,7 @@ jasmine.createSpy = function(name) {};
 
 /**
  * @param {string} name
- * @param {!Array.<string>} members
+ * @param {!Array<string>} members
  * @return {?}
  */
 jasmine.createSpyObj = function(name, members) {};
@@ -397,8 +397,8 @@ jasmine.stringMatching = function(value) {};
 /**
  * Matches an Array containing all of the values specified, in any order.
  *
- * @param {!Array.<T>} values
- * @return {!Array.<T>}
+ * @param {!Array<T>} values
+ * @return {!Array<T>}
  * @template T
  */
 jasmine.arrayContaining = function(values) {};
@@ -408,8 +408,8 @@ jasmine.arrayContaining = function(values) {};
  * Matches an Array with exactly the values specified, no more, no less, in any
  * order.
  *
- * @param {!Array.<T>} values
- * @return {!Array.<T>}
+ * @param {!Array<T>} values
+ * @return {!Array<T>}
  * @template T
  */
 jasmine.arrayWithExactContents = function(values) {};
@@ -600,7 +600,7 @@ jasmine.Ajax.RequestStub.prototype.data;
 jasmine.Ajax.RequestStub.prototype.method;
 
 
-/** @const {!Object.<string, string>} */
+/** @const {!Object<string, string>} */
 jasmine.Ajax.RequestStub.prototype.requestHeaders;
 
 

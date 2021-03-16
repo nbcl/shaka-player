@@ -68,7 +68,7 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
 
   /** @private */
   updateResolutionSelection_() {
-    /** @type {!Array.<shaka.extern.Track>} */
+    /** @type {!Array<shaka.extern.Track>} */
     let tracks = this.player.getVariantTracks();
 
     // Hide resolution menu and button for audio-only content and src= content

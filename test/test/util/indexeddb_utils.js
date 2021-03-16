@@ -26,7 +26,7 @@ shaka.test.IndexedDBUtils = class {
    * @param {number} version
    * @param {function(IDBDatabase)} upgrade
    *
-   * @return {!Promise.<IDBDatabase>}
+   * @return {!Promise<IDBDatabase>}
    */
   static async makeConnection(name, version, upgrade) {
     const wait = () => {
@@ -77,7 +77,7 @@ shaka.test.IndexedDBUtils = class {
    * @param {number} version
    * @param {function(IDBDatabase)} upgrade
    *
-   * @return {!Promise.<IDBDatabase>}
+   * @return {!Promise<IDBDatabase>}
    * @private
    */
   static dbOpenNew_(name, version, upgrade) {
@@ -114,7 +114,7 @@ shaka.test.IndexedDBUtils = class {
    * not exist, the returned promise will be rejected.
    *
    * @param {string} name
-   * @return {!Promise.<IDBDatabase>}
+   * @return {!Promise<IDBDatabase>}
    */
   static open(name) {
     /** @type {!shaka.util.PublicPromise} */

@@ -353,7 +353,7 @@ module.exports = (config) => {
  * array of strings.
  *
  * @param {!Object} config
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 function allUsableBrowserLaunchers(config) {
   const browsers = [];
@@ -434,7 +434,7 @@ function WebDriverScreenshotMiddlewareFactory(launcher) {
    * Extract URL params from the request.
    *
    * @param {express.Request} request
-   * @return {!Object.<string, string>}
+   * @return {!Object<string, string>}
    */
   function getParams(request) {
     // This can be null for manually-connected browsers.
@@ -515,8 +515,8 @@ function WebDriverScreenshotMiddlewareFactory(launcher) {
    * Write the diff to disk, as well.
    *
    * @param {karma.Launcher.Browser} browser
-   * @param {!Object.<string, string>} params
-   * @return {!Promise.<number>} The number of pixels changed between the old
+   * @param {!Object<string, string>} params
+   * @return {!Promise<number>} The number of pixels changed between the old
    *   and new screenshots, after cropping and scaling.
    */
   async function diffScreenshot(browser, params) {

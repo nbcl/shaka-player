@@ -63,15 +63,15 @@ describe('DashParser Manifest', () => {
   /**
    * Makes a series of tests for the given manifest type.
    *
-   * @param {!Array.<string>} startLines
-   * @param {!Array.<string>} endLines
+   * @param {!Array<string>} startLines
+   * @param {!Array<string>} endLines
    * @param {shaka.extern.Manifest} expected
    */
   function makeTestsForEach(startLines, endLines, expected) {
     /**
      * Makes manifest text for testing.
      *
-     * @param {!Array.<string>} lines
+     * @param {!Array<string>} lines
      * @return {string}
      */
     function makeTestManifest(lines) {
@@ -619,7 +619,7 @@ describe('DashParser Manifest', () => {
     });
 
     /**
-     * @param {!Array.<string>} lines
+     * @param {!Array<string>} lines
      * @return {string}
      */
     function makeManifest(lines) {
@@ -1306,7 +1306,7 @@ describe('DashParser Manifest', () => {
   describe('AudioChannelConfiguration', () => {
     /**
      * @param {?number} expectedNumChannels The expected number of channels
-     * @param {!Object.<string, string>} schemeMap A map where the map key is
+     * @param {!Object<string, string>} schemeMap A map where the map key is
      *   the AudioChannelConfiguration's schemeIdUri attribute, and the map
      *   value is the value attribute.
      * @return {!Promise}

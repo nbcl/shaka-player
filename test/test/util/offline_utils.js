@@ -64,7 +64,7 @@ shaka.test.OfflineUtils = class {
   }
 
   /**
-   * @param {!Array.<number>} data
+   * @param {!Array<number>} data
    * @return {shaka.extern.SegmentDataDB}
    */
   static createSegmentData(data) {
@@ -74,7 +74,7 @@ shaka.test.OfflineUtils = class {
   }
 
   /**
-   * @param {!Array.<shaka.extern.SegmentDataDB>} segments
+   * @param {!Array<shaka.extern.SegmentDataDB>} segments
    * @param {shaka.extern.SegmentDataDB} expected
    */
   static expectSegmentsToContain(segments, expected) {
