@@ -77,6 +77,7 @@ goog.require('shaka.ui.LoopButton');
 goog.require('shaka.ui.MuteButton');
 goog.require('shaka.ui.Overlay');
 goog.require('shaka.ui.PipButton');
+goog.require('shaka.ui.PipButtonControl');
 goog.require('shaka.ui.PlaybackRateSelection');
 goog.require('shaka.ui.PresentationTimeTracker');
 goog.require('shaka.ui.ResolutionSelection');

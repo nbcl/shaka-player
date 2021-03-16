@@ -21,6 +21,7 @@
 +../../ui/mute_button.js
 +../../ui/overflow_menu.js
 +../../ui/pip_button.js
++../../ui/pip_button_control.js
 +../../ui/playback_rate_selection.js
 +../../ui/presentation_time.js
 +../../ui/range_element.js
