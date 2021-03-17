@@ -53,7 +53,9 @@ module.exports = {
     'ecmaVersion': 2017,
   },
   'extends': ['eslint:recommended', 'google', 'plugin:shaka-rules/config'],
+  'plugins': ['jsdoc'],
   'rules': {
+    'jsdoc/check-types': ['error', {'noDefaults': true}],
     // Things the compiler already takes care of, with more precision: {{{
     'no-console': 'off',
     'no-eq-null': 'off',
@@ -306,4 +308,12 @@ module.exports = {
       ],
     },
   ],
+  'settings': {
+    'jsdoc': {
+      'preferredTypes': {
+        '.<>': '<>',
+      },
+      'mode': 'closure',
+    },
+  },
 };
