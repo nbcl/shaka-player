@@ -34,7 +34,7 @@ shaka.ui.PipButton = class extends shaka.ui.Element {
   constructor(parent, controls, overflows) {
     super(parent, controls);
 
-    this.overflows_ = overflows;
+    this.inOverflowMenu_ = overflows;
 
     /** @private {HTMLMediaElement} */
     this.localVideo_ = this.controls.getLocalVideo();
@@ -49,7 +49,7 @@ shaka.ui.PipButton = class extends shaka.ui.Element {
     this.pipIcon_.textContent = shaka.ui.Enums.MaterialDesignIcons.PIP;
     this.pipButton_.appendChild(this.pipIcon_);
 
-    if (this.overflows_) {
+    if (this.inOverflowMenu_) {
       const LocIds = shaka.ui.Locales.Ids;
 
       const label = shaka.util.Dom.createHTMLElement('label');
@@ -150,7 +150,7 @@ shaka.ui.PipButton = class extends shaka.ui.Element {
     this.pipButton_.setAttribute(shaka.ui.Constants.ARIA_LABEL,
         this.localization.resolve(LocIds.EXIT_PICTURE_IN_PICTURE));
 
-    if (this.overflows_) {
+    if (this.inOverflowMenu_) {
       this.currentPipState_.textContent =
           this.localization.resolve(LocIds.ON);
     }
@@ -164,7 +164,7 @@ shaka.ui.PipButton = class extends shaka.ui.Element {
     this.pipButton_.setAttribute(shaka.ui.Constants.ARIA_LABEL,
         this.localization.resolve(LocIds.ENTER_PICTURE_IN_PICTURE));
 
-    if (this.overflows_) {
+    if (this.inOverflowMenu_) {
       this.currentPipState_.textContent =
         this.localization.resolve(LocIds.OFF);
     }
@@ -183,7 +183,7 @@ shaka.ui.PipButton = class extends shaka.ui.Element {
     this.pipButton_.setAttribute(shaka.ui.Constants.ARIA_LABEL,
         this.localization.resolve(ariaLabel));
 
-    if (this.overflows_) {
+    if (this.inOverflowMenu_) {
       this.pipNameSpan_.textContent =
         this.localization.resolve(LocIds.PICTURE_IN_PICTURE);
 
