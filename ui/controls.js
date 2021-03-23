@@ -857,14 +857,6 @@ shaka.ui.Controls = class extends shaka.util.FakeEventTarget {
     this.bottomControls_.classList.add('shaka-no-propagation');
     this.controlsContainer_.appendChild(this.bottomControls_);
 
-    // Overflow menus are supposed to hide once you click elsewhere
-    // on the page. The click event listener on window ensures that.
-    // However, clicks on the bottom controls don't propagate to the container,
-    // so we have to explicitly hide the menus onclick here.
-    this.eventManager_.listen(this.bottomControls_, 'click', () => {
-      this.hideSettingsMenus();
-    });
-
     this.addAdControls_();
 
     /** @private {!HTMLElement} */

@@ -55,6 +55,7 @@ shaka.ui.SettingsMenu = class extends shaka.ui.Element {
 
     const label = shaka.util.Dom.createHTMLElement('label');
     label.classList.add('shaka-overflow-button-label');
+    label.classList.add('shaka-overflow-menu-only');
 
     /** @protected {!HTMLElement}*/
     this.nameSpan = shaka.util.Dom.createHTMLElement('span');
@@ -100,8 +101,12 @@ shaka.ui.SettingsMenu = class extends shaka.ui.Element {
 
   /** @private */
   onButtonClick_() {
-    this.controls.dispatchEvent(new shaka.util.FakeEvent('submenuopen'));
-    shaka.ui.Utils.setDisplay(this.menu, true);
-    shaka.ui.Utils.focusOnTheChosenItem(this.menu);
+    if (this.menu.classList.contains('shaka-hidden')) {
+      this.controls.dispatchEvent(new shaka.util.FakeEvent('submenuopen'));
+      shaka.ui.Utils.setDisplay(this.menu, true);
+      shaka.ui.Utils.focusOnTheChosenItem(this.menu);
+    } else {
+      shaka.ui.Utils.setDisplay(this.menu, false);
+    }
   }
 };

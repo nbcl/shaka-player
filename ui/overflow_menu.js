@@ -95,8 +95,10 @@ shaka.ui.OverflowMenu = class extends shaka.ui.Element {
 
     this.eventManager.listen(
         this.controls, 'submenuopen', () => {
-        // Hide the main overflow menu if one of the sub menus has
-        // been opened.
+        // Hide other sub menus that are currently open.
+          this.controls.hideSettingsMenus();
+          // Hide the main overflow menu if one of the sub menus has
+          // been opened.
           shaka.ui.Utils.setDisplay(this.overflowMenu_, false);
         });
 
