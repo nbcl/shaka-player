@@ -209,25 +209,18 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
     const LocIds = shaka.ui.Locales.Ids;
 
     // Assign text attributes depending on content type.
-    if (this.player.isAudioOnly()) {
-      this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-          this.localization.resolve(LocIds.QUALITY));
-      this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-          this.localization.resolve(LocIds.QUALITY));
-      this.backSpan.textContent =
-          this.localization.resolve(LocIds.QUALITY);
-      this.nameSpan.textContent =
-          this.localization.resolve(LocIds.QUALITY);
-    } else {
-      this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-          this.localization.resolve(LocIds.RESOLUTION));
-      this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-          this.localization.resolve(LocIds.RESOLUTION));
-      this.backSpan.textContent =
-        this.localization.resolve(LocIds.RESOLUTION);
-      this.nameSpan.textContent =
-        this.localization.resolve(LocIds.RESOLUTION);
-    }
+    const locId =
+        this.player.isAudioOnly() ? LocIds.QUALITY : LocIds.RESOLUTION;
+
+    this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+        this.localization.resolve(locId));
+    this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+        this.localization.resolve(locId));
+    this.backSpan.textContent =
+      this.localization.resolve(locId);
+    this.nameSpan.textContent =
+      this.localization.resolve(locId);
+
     this.abrOnSpan_.textContent =
         this.localization.resolve(LocIds.AUTO_QUALITY);
 
