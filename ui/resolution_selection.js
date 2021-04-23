@@ -88,7 +88,7 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
       if (this.player.isAudioOnly()) {
         // Keep the first one with the same bandwidth.
         otherIdx = tracks.findIndex(
-            (t) => t.audioBandwidth == track.audioBandwidth);
+            (t) => t.bandwidth == track.bandwidth);
       } else {
         // Keep the first one with the same height.
         otherIdx = tracks.findIndex((t) => t.height == track.height);
@@ -99,10 +99,10 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
     // Sort the tracks in height or bandwith depending on content type.
     if (this.player.isAudioOnly()) {
       tracks.sort((t1, t2) => {
-        goog.asserts.assert(t1.audioBandwidth != null, 'Null audioBandwidth');
-        goog.asserts.assert(t2.audioBandwidth != null, 'Null audioBandwidth');
+        goog.asserts.assert(t1.bandwidth != null, 'Null bandwidth');
+        goog.asserts.assert(t2.bandwidth != null, 'Null bandwidth');
 
-        return t2.audioBandwidth - t1.audioBandwidth;
+        return t2.bandwidth - t1.bandwidth;
       });
     } else {
       tracks.sort((t1, t2) => {
@@ -137,7 +137,7 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
 
       // Asign textContent depending on content type.
       if (this.player.isAudioOnly()) {
-        span.textContent = track.audioBandwidth + ' bits/s';
+        span.textContent = track.bandwidth + ' bits/s';
       } else {
         span.textContent = track.height + 'p';
       }
