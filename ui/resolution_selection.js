@@ -60,9 +60,6 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
     });
 
     this.updateResolutionSelection_();
-
-    // Set up all the strings in the user's preferred language.
-    this.updateLocalizedStrings_();
   }
 
 
@@ -71,26 +68,7 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
     /** @type {!Array.<shaka.extern.Track>} */
     let tracks = this.player.getVariantTracks();
 
-    // Hide resolution menu and button for audio-only content and src= content
-    // without resolution information.
-    // TODO: for audio-only content, this should be a bitrate selection menu
-    // instead.
-    if (tracks.length && !tracks[0].height) {
-      shaka.ui.Utils.setDisplay(this.menu, false);
-      shaka.ui.Utils.setDisplay(this.button, false);
-      return;
-    }
-    // Otherwise, restore it.
     shaka.ui.Utils.setDisplay(this.button, true);
-
-    tracks.sort((t1, t2) => {
-      // We have already screened for audio-only content, but the compiler
-      // doesn't know that.
-      goog.asserts.assert(t1.height != null, 'Null height');
-      goog.asserts.assert(t2.height != null, 'Null height');
-
-      return t2.height - t1.height;
-    });
 
     // If there is a selected variant track, then we filter out any tracks in
     // a different language.  Then we use those remaining tracks to display the
@@ -103,13 +81,37 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
               track.channelsCount == selectedTrack.channelsCount);
     }
 
-    // Remove duplicate entries with the same height.  This can happen if
-    // we have multiple resolutions of audio.  Pick an arbitrary one.
+    // Remove duplicate entries with the same resolution or quality depending.
+    // on content type. Pick an arbitrary one.
     tracks = tracks.filter((track, idx) => {
-      // Keep the first one with the same height.
-      const otherIdx = tracks.findIndex((t) => t.height == track.height);
+      let otherIdx;
+      if (this.player.isAudioOnly()) {
+        // Keep the first one with the same bandwidth.
+        otherIdx = tracks.findIndex(
+            (t) => t.audioBandwidth == track.audioBandwidth);
+      } else {
+        // Keep the first one with the same height.
+        otherIdx = tracks.findIndex((t) => t.height == track.height);
+      }
       return otherIdx == idx;
     });
+
+    // Sort the tracks in height or bandwith depending on content type.
+    if (this.player.isAudioOnly()) {
+      tracks.sort((t1, t2) => {
+        goog.asserts.assert(t1.audioBandwidth != null, 'Null audioBandwidth');
+        goog.asserts.assert(t2.audioBandwidth != null, 'Null audioBandwidth');
+
+        return t2.audioBandwidth - t1.audioBandwidth;
+      });
+    } else {
+      tracks.sort((t1, t2) => {
+        goog.asserts.assert(t1.height != null, 'Null height');
+        goog.asserts.assert(t2.height != null, 'Null height');
+
+        return t2.height - t1.height;
+      });
+    }
 
     // Remove old shaka-resolutions
     // 1. Save the back to menu button
@@ -132,7 +134,13 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
           () => this.onTrackSelected_(track));
 
       const span = shaka.util.Dom.createHTMLElement('span');
-      span.textContent = track.height + 'p';
+
+      // Asign textContent depending on content type.
+      if (this.player.isAudioOnly()) {
+        span.textContent = track.audioBandwidth + ' bits/s';
+      } else {
+        span.textContent = track.height + 'p';
+      }
       button.appendChild(span);
 
       if (!abrEnabled && track == selectedTrack) {
@@ -176,6 +184,8 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
     shaka.ui.Utils.focusOnTheChosenItem(this.menu);
     this.controls.dispatchEvent(
         new shaka.util.FakeEvent('resolutionselectionupdated'));
+
+    this.updateLocalizedStrings_();
   }
 
 
@@ -198,14 +208,26 @@ shaka.ui.ResolutionSelection = class extends shaka.ui.SettingsMenu {
   updateLocalizedStrings_() {
     const LocIds = shaka.ui.Locales.Ids;
 
-    this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-        this.localization.resolve(LocIds.RESOLUTION));
-    this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
-        this.localization.resolve(LocIds.RESOLUTION));
-    this.backSpan.textContent =
+    // Assign text attributes depending on content type.
+    if (this.player.isAudioOnly()) {
+      this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+          this.localization.resolve(LocIds.QUALITY));
+      this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+          this.localization.resolve(LocIds.QUALITY));
+      this.backSpan.textContent =
+          this.localization.resolve(LocIds.QUALITY);
+      this.nameSpan.textContent =
+          this.localization.resolve(LocIds.QUALITY);
+    } else {
+      this.button.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+          this.localization.resolve(LocIds.RESOLUTION));
+      this.backButton.setAttribute(shaka.ui.Constants.ARIA_LABEL,
+          this.localization.resolve(LocIds.RESOLUTION));
+      this.backSpan.textContent =
         this.localization.resolve(LocIds.RESOLUTION);
-    this.nameSpan.textContent =
+      this.nameSpan.textContent =
         this.localization.resolve(LocIds.RESOLUTION);
+    }
     this.abrOnSpan_.textContent =
         this.localization.resolve(LocIds.AUTO_QUALITY);
 
